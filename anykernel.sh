@@ -4,7 +4,7 @@
 ### AnyKernel setup
 # global properties
 properties() { "
-kernel.string=Huangdihd's fork of Wild Kernels for OnePlus
+kernel.string=p0s3id0n's fork of Wild Kernels for OnePlus
 do.devicecheck=0
 do.modules=0
 do.systemless=0
@@ -53,8 +53,8 @@ else
 fi
 
 ui_print " "
-ui_print "Huangdihd's Fork of Wild Kernels for OnePlus Telegram Channel:"
-ui_print "https://t.me/huangdihd_wildkernel"
+ui_print "p0s3id0n's Fork of Wild Kernels for OnePlus Telegram Channel:"
+ui_print "https://t.me/+JU4XbSnYz905YjRl"
 ui_print " "
 ui_print "WildKernels Website:"
 ui_print "https://wildkernels.dev"
@@ -68,7 +68,7 @@ ui_print "https://github.com/coolzyd9107/GKI_KernelSU_SUSFS"
 ui_print "GKI kernels with ReSukiSU and SUSFS."
 ui_print " "
 ui_print "OnePlus_ReSukiSU_SUSFS GitHub Repository:"
-ui_print "https://github.com/huangdihd/OnePlus_ReSukiSU_SUSFS"
+ui_print "https://github.com/p0s3id0nNV/X7U_ReSukiSU_SUSFS"
 ui_print "OnePlus kernels with KernelSU and SUSFS."
 ui_print " "
 ui_print "Thank for contribution from wildkernels, ReSukiSU, SUSFS and all members in Telegram channel."
