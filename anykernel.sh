@@ -3,13 +3,14 @@
 
 ### AnyKernel setup
 # global properties
-properties() { "
-kernel.string=AnyKernel3 by KernelSU Developers | Build by p0s3id0n
+properties() { '
+kernel.string=Wild Kernels by TheWildJames aka Morgan Weedman
 do.devicecheck=0
 do.modules=0
 do.systemless=0
 do.cleanup=1
 do.cleanuponabort=0
+do.check_boot_version=0
 device.name1=
 device.name2=
 device.name3=
@@ -18,7 +19,7 @@ device.name5=
 supported.versions=
 supported.patchlevels=
 supported.vendorpatchlevels=
-"; } # end properties
+'; } # end properties
 
 
 ### AnyKernel install
@@ -32,6 +33,7 @@ no_magisk_check=1
 # import functions/variables and setup patching - see for reference (DO NOT REMOVE)
 . tools/ak3-core.sh
 
+# GKI check
 kernel_version=$(cat /proc/version | awk -F '-' '{print $1}' | awk '{print $3}')
 case $kernel_version in
     5.1*) ksu_supported=true ;;
@@ -40,12 +42,13 @@ case $kernel_version in
     *) ksu_supported=false ;;
 esac
 
-ui_print " " "  -> OKI Kernel Supported: $ksu_supported"
+ui_print " " "  -> Wild Kernels Supported: $ksu_supported"
 $ksu_supported || abort "  -> Non-GKI device, abort."
 
 # boot install
 split_boot
-if [ -f "split_img/ramdisk.cpio" ]; then
+
+if [ -f "$SPLITIMG/ramdisk.cpio" ]; then
     unpack_ramdisk
     write_boot
 else
@@ -53,22 +56,25 @@ else
 fi
 
 ui_print " "
-ui_print "p0s3id0n's Fork of Wild Kernels for OnePlus Telegram Channel:"
-ui_print "https://t.me/+JU4XbSnYz905YjRl"
+ui_print "WildKernels Telegram Channel:"
+ui_print "https://t.me/WildKernels"
 ui_print " "
 ui_print "WildKernels Website:"
 ui_print "https://wildkernels.dev"
 ui_print " "
-ui_print "ReSukiSU GitHub Repository:"
-ui_print "https://github.com/ReSukiSU/ReSukiSU"
-ui_print "Kernel-based Android Root Solution,forked from sukisu"
+ui_print "Wild_KSU GitHub Repository:"
+ui_print "https://github.com/WildKernels/Wild_KSU"
+ui_print "KernelSU-Next fork focused on customization and root-hiding features!"
 ui_print " "
 ui_print "GKI_KernelSU_SUSFS GitHub Repository:"
-ui_print "https://github.com/coolzyd9107/GKI_KernelSU_SUSFS"
-ui_print "GKI kernels with ReSukiSU and SUSFS."
+ui_print "https://github.com/WildKernels/GKI_KernelSU_SUSFS"
+ui_print "GKI kernels with KernelSU and SUSFS."
 ui_print " "
-ui_print "OnePlus_ReSukiSU_SUSFS GitHub Repository:"
-ui_print "https://github.com/p0s3id0nVN/Onplus_ReSukiSU_SUSFS"
+ui_print "OnePlus_KernelSU_SUSFS GitHub Repository:"
+ui_print "https://github.com/WildKernels/OnePlus_KernelSU_SUSFS"
 ui_print "OnePlus kernels with KernelSU and SUSFS."
 ui_print " "
-ui_print "Thank for contribution from wildkernels, ReSukiSU, SUSFS and all members in Telegram channel."
+ui_print "Samsung_KernelSU_SUSFS GitHub Repository:"
+ui_print "https://github.com/WildKernels/Samsung_KernelSU_SUSFS"
+ui_print "Samsung kernels with KernelSU and SUSFS."
+ui_print " "
