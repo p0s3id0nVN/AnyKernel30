@@ -4,7 +4,7 @@
 ### AnyKernel setup
 # global properties
 properties() { '
-kernel.string=Wild Kernels by TheWildJames aka Morgan Weedman
+kernel.string=OKI Kernels by PSD
 do.devicecheck=0
 do.modules=0
 do.systemless=0
@@ -42,7 +42,7 @@ case $kernel_version in
     *) ksu_supported=false ;;
 esac
 
-ui_print " " "  -> Wild Kernels Supported: $ksu_supported"
+ui_print " " "  -> OKI Kernels Supported: $ksu_supported"
 $ksu_supported || abort "  -> Non-GKI device, abort."
 
 # boot install
@@ -56,8 +56,8 @@ else
 fi
 
 ui_print " "
-ui_print "WildKernels Telegram Channel:"
-ui_print "https://t.me/WildKernels"
+ui_print "OKI Telegram Channel:"
+ui_print "https://t.me/PSD-KERNEL"
 ui_print " "
 ui_print "WildKernels Website:"
 ui_print "https://wildkernels.dev"
@@ -74,7 +74,4 @@ ui_print "OnePlus_KernelSU_SUSFS GitHub Repository:"
 ui_print "https://github.com/WildKernels/OnePlus_KernelSU_SUSFS"
 ui_print "OnePlus kernels with KernelSU and SUSFS."
 ui_print " "
-ui_print "Samsung_KernelSU_SUSFS GitHub Repository:"
-ui_print "https://github.com/WildKernels/Samsung_KernelSU_SUSFS"
-ui_print "Samsung kernels with KernelSU and SUSFS."
-ui_print " "
+
